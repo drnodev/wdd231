@@ -1,0 +1,81 @@
+
+:root {
+  --primary-color: rgb(0, 110, 253);
+  --h2-color: rgb(0, 110, 253);
+  --border-color: #333;
+  --color: #333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+main{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--primary-color);
+    border-bottom: 0.3rem solid var(--border-color);
+}
+
+h1 {
+    padding: 1rem;
+	text-align: center;
+	font-size: 2.5rem;
+	margin-left: 1rem; 
+}
+
+
+.hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  object-fit: cover; 
+  display: block;
+}
+h2{
+    text-align: center;
+    margin: 1rem;
+} 
+
+table{
+    width: 100%;
+}
+
+th, td {
+    padding: 5px 5px;
+  }
+
+ td:first-child {
+    text-align: right;
+    font-weight: bold;
+    width: 50%;
+  }
+  td:last-child {
+    text-align: left;
+    width: 50%;
+  }
+
+  .weather{
+    text-align: center;
+    padding: 1rem;
+  }
+ 
+ 
+ footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1; 
+    font-size: 0.9rem;
+    color: var(--color);
+  }
+

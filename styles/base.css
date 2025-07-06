@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    font-style: normal;
+}
+
+  
+h1 {
+	background-color: #007acc;
+	padding: 1rem;
+	border: 1px solid rgb(0 0 0 / 10%);
+	font-size: 2rem;
+	text-align: center;
+}
+
+
+nav {
+	background-color: #36454f;
+	margin: 0 auto;
+	/*max-width: 800px;*/
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: none;
+    background-color: rgb(91, 86, 57);
+    color: #fff;
+}
+
+.active {
+	color: yellow;
+}
+
+
+main{
+    
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 80%;
+    
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .me{
+    display: flex;
+    align-items: center;
+  }
+
+  .flag,.r2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    background-color: #007acc; 
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .card-content{
+    margin-top: 0.5rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1; 
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+
+  .me, .about{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+ul {
+    display: block;
+    list-style-type: none;
+}
+.dev li{
+    margin-top: 1rem;
+}
+
+li a{
+    text-decoration: none;
+}
+
+
+@media (min-width: 1500px) {
+    main{
+        grid-template-columns: 2fr 1fr;   
+    }
+    nav ul {
+		display: flex;
+	}
+    nav ul li {
+		flex: 1 0 auto;
+    }
+    .me img{float: left;}
+    .d2{
+        display: flex;
+        gap: 2rem;
+    }
+    .d2 p{
+        padding: 0.5rem;
+    }
+    .r2{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+  }
