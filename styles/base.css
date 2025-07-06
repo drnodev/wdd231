@@ -1,3 +1,12 @@
+:root {
+  --primary-color:    #2c6ceb;
+  --secondary-color:  #414563;
+  --accent-color:     #00b894;
+  --text-color:       #333333;
+  --background-color: #f5f5f5;
+  --action-color:     #244c68;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -14,7 +23,7 @@ body {
 
   
 h1 {
-	background-color: #007acc;
+	background-color: var(--primary-color);
 	padding: 1rem;
 	border: 1px solid rgb(0 0 0 / 10%);
 	font-size: 2rem;
@@ -23,9 +32,8 @@ h1 {
 
 
 nav {
-	background-color: #36454f;
+	background-color: var(--secondary-color);
 	margin: 0 auto;
-	/*max-width: 800px;*/
 }
 nav ul {
 	list-style-type: none;
@@ -39,8 +47,8 @@ nav a {
 }
 
 nav a:hover {
-	text-decoration: none;
-    background-color: rgb(91, 86, 57);
+	  text-decoration: none;
+    background-color: var(--accent-color);
     color: #fff;
 }
 
@@ -49,7 +57,7 @@ nav a:hover {
 }
 
 
-main{
+ main{
     
     margin: 0 auto;
     display: grid;
@@ -57,50 +65,34 @@ main{
     gap: 2rem;
     padding: 1rem;
     max-width: 80%;
-    
-  }
-  
-  .card {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .me{
-    display: flex;
-    align-items: center;
-  }
 
-  .flag,.r2{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  h2 {
-    background-color: #007acc; 
-    color: white;
+  h2{
+    background-color: var(--primary-color); 
+    color: var(--background-color);
     text-align: center;
+    font-size: 20px;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: 2px;
     margin-bottom: 1rem;
+    width: 100%;
   }
 
-  .card-content{
-    margin-top: 0.5rem ;
+  section{
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
-    
+    align-items: center;
   }
+
+
 
   footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f1f1f1; 
+    background-color: var(--background-color); 
     font-size: 0.9rem;
-    color: #333;
+    color: var(--secondary-color);
   }
 
 
@@ -114,38 +106,82 @@ ul {
     display: block;
     list-style-type: none;
 }
-.dev li{
-    margin-top: 1rem;
-}
+
 
 li a{
     text-decoration: none;
 }
 
+.course{
+  background-color: var(--action-color);
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  color: var(--background-color);
+}
+
+.completed::before{
+    content: "✅ ";
+}
+
+button{
+  background-color: var(--action-color);
+  padding: 10px;
+  margin: 2px;
+  color: var(--background-color);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button.active{
+  background-color: var(--accent-color);
+}
+
+button:hover{
+  background-color: var(--accent-color);
+}
+
+#result{
+  width: 100%;
+  place-items: center;
+}
+
+#information{
+  padding: 10px;
+}
 
 @media (min-width: 1500px) {
+    body{
+      font-size: 1.5rem;
+    }
     main{
         grid-template-columns: 2fr 1fr;   
     }
+    .dev{
+         grid-column: span 2;
+    }
+     h2{
+      font-size: 1.4rem;
+     }
     nav ul {
-		display: flex;
-	}
+		  display: flex;
+	  } 
     nav ul li {
-		flex: 1 0 auto;
+		  flex: 1 0 auto;
     }
-    .me img{float: left;}
-    .d2{
-        display: flex;
-        gap: 2rem;
+
+    .course{
+      width: 90%;
     }
-    .d2 p{
-        padding: 0.5rem;
+
+    #result{
+        display: grid;
+        margin-top: 2rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-    .r2{
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 2rem;
-        padding: 1rem;
-    }
-    
   }
