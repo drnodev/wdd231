@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     div.classList.add('item');
 
     const image = document.createElement('img');
+    image.width = 100
     image.src = item.image;
     image.alt = item.name;
     image.loading = 'lazy';
