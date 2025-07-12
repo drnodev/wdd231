@@ -61,22 +61,24 @@
     <main>
         <h1>Member Directory</h1>
         <section class="section-search">
-            <h5>Directory Filters</h5>
-            <div>
-                <label for="search">Search By Name</label>
-                <input type="text" id="search">
-            </div>
-            <div>
-                <label for="member-level">Filter Level</label>
-                <select id="member-level">
-                    <option>All</option>
-                    <option value="1">Member</option>
-                    <option value="2">Silver</option>
-                    <option value="3">Gold</option>
-                </select>
-            </div>
-            <div>
-                <button type="button">Search</button>
+            <h5 class="search-inputs">Directory Filters</h5>
+            <div class="search-inputs">
+                <div>
+                    <label for="search">Search By Name</label>
+                    <input type="text" id="search">
+                </div>
+                    <div>
+                        <label for="member-level">Filter Level</label>
+                        <select id="member-level">
+                            <option value="">All</option>
+                            <option value="1">Member</option>
+                            <option value="2">Silver</option>
+                            <option value="3">Gold</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="btn-filter" type="button">Search</button>
+                    </div>
             </div>
         </section>
         <section class="section-result">

@@ -84,4 +84,12 @@
         background-color: var(--accent-color);
         color: #000;
     }
+
+    .search-inputs{
+        display: flex;
+        width: 50% !important;
+        margin: 0 auto;
+        gap: 1rem;
+        align-items: end;
+    }
 }   
