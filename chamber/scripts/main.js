@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         image.alt = item.name;
         image.loading = 'lazy';
         image.classList.add(item.color || 'none');
+        image.classList.add('no320')
 
         const name = document.createElement('div')
         name.innerHTML = `<small>${item.name}</small>`
 
         const phone = document.createElement('div')
-        phone.classList.add('no320')
         phone.innerHTML = `<small>${item.phone}</small>`
 
         const website = document.createElement('div')
