@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #209CEE;
+    --secondary-color: #414563;
+    --accent-color: #00b894;
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --action-color: #244c68;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    font-style: normal;
+    background-color: var(--background-color);
+}
+
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    background-color: var(--primary-color)
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.logo img {
+    transform: translateX(-24px);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    color: var(--heading-text-color);
+}
+
+.navigation li {
+    list-style: none;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation li:hover {
+    background-color: var(--accent-color);
+    color: var(--heading-text-color);
+    cursor: pointer;
+}
+
+
+#menu {
+    display: block;
+    background-color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--heading-text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    width: 60px;
+    margin-top: 5px;
+}
+
+#menu svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+#menu.open {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.navigation.open {
+    display: flex;
+}
+
+#menu:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+main h2{
+    margin-top: 1rem;
+    text-align: center;
+}

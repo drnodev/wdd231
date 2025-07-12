@@ -19,8 +19,42 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-    
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="images/logo.png" width="160" alt="Logo">
+            </div>
+            <div class="nav-container">
+                <button type="button" id="menu" aria-labelledby="menu">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a id="home"    href="index.html">Home</a></li>
+                <li class="active"><a  href="index.html#service">Service</a></li>
+                <li><a id="events"  href="events.html">Events</a></li>
+                <li><a id="gallery" href="gallery.html">Gallery</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Member Directory</h2>
+    </main>
+    <script defer src="scripts/main.js"></script>
 </body>
 </html>
