@@ -9,27 +9,31 @@
     
     <meta property="og:title" content="Chamber Directory Pag" />
     <meta property="og:description" content="Chamber Directory Pag : This page provides a list of local business and other organizations that belong to the chamber of commerce." />
-    <meta property="og:image" content="https://drnodev.github.io/wdd231/chamber/android-chrome-512x512.png" />
+    <meta property="og:image" content="https://drnodev.github.io/wdd231/chamber/images/favicon/android-chrome-512x512.png" />
     <meta property="og:url" content="https://drnodev.github.io/wdd231/chamber/directory.html" />
     <meta property="og:type" content="website" />
     
     <title>Chamber Directory Page</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
     <header>
         <div class="header-wrapper">
             <div class="logo">
                 <img src="images/logo.png" width="160" alt="Logo">
+            </div>
+            <div class="site-brand-sm">
+                El Salvador Chamber of Commerce
             </div>
             <div class="nav-container">
                 <button type="button" id="menu" aria-labelledby="menu">
@@ -42,19 +46,54 @@
                 </button>
             </div>
         </div>
+        <div class="site-brand-lg">
+            El Salvador Chamber of Commerce
+        </div>
         <nav>
             <ul class="navigation">
-                <li><a id="home"    href="index.html">Home</a></li>
-                <li class="active"><a  href="index.html#service">Service</a></li>
-                <li><a id="events"  href="events.html">Events</a></li>
-                <li><a id="gallery" href="gallery.html">Gallery</a></li>
-                <li><a id="contact" href="contact.html">Contact</a></li>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Business Directory</a></li>
+                <li><a href="#">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Member Directory</h2>
+        <h1>Member Directory</h1>
+        <section class="section-search">
+            <div>
+                <input type="text" id="search">
+            </div>
+            <div>
+                <select id="member-level">
+                    <option>All</option>
+                    <option value="1">Member</option>
+                    <option value="2">Silver</option>
+                    <option value="3">Gold</option>
+                </select>
+            </div>
+            <div>
+                <button>Search</button>
+            </div>
+        </section>
+        <section class="section-result">
+            <hr>
+            <div class="view-result-change">
+                <button id="v-grid" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg></button>
+                <button id="v-list"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z"/></svg></button>
+            </div>
+            <h3>Members</h3>
+            <div id="data-result" class="grid">
+                
+            </div>
+        </section>
     </main>
+     <footer>
+        <div class="site-info">
+            <div>&copy; <span id="currentyear"></span> Nelson Ortega, El Salvador</div>
+            <div id="lastModified"></div>
+        </div>
+    </footer>
     <script defer src="scripts/main.js"></script>
 </body>
 </html>

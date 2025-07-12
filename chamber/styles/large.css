@@ -1,3 +1,86 @@
 @media (min-width: 769px) {
+     header {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-color);
+    }
+    header div:nth-child(2) {
+        text-align: center;
+        width: 50%;
+    }
+    header nav:last-child {
+        flex-grow: 1;
+        color: var(--background-color);
+    }
+    .site-brand-sm{
+        display: none;
+    }
+    .site-brand-lg{
+        font-size: 1.8rem;
+        display: block;
+        color: var(--background-color);
+        font-weight: 300;
+    }
+    #menu {
+        display: none;
+    }
 
-}
+    nav {
+        justify-items: center;
+    }
+
+    .navigation {
+        justify-items: center;
+    }
+
+    .navigation,
+    .navigation li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    li.active, .active a{
+        background-color: var(--primary-color);
+        color: #000 !important;
+    }
+
+    .navigation a {
+        padding: 24px;
+        width: 100%;
+        display: block;
+    }
+
+    .logo {
+        margin-left: 2.5rem;
+    }
+
+    nav {
+        position: static;
+        width: inherit;
+        z-index: 100;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: var(--body-text-color);
+    }
+
+    .list .item{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .no320{
+        display: block !important;
+    }
+
+    #data-result.grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    a.active{
+        background-color: var(--accent-color);
+    }
+}   

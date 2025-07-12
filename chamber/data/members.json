@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Banco Agrícola",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2210‑0000",
+    "website": "https://www.bancoagricola.com",
+    "image": "https://www.bancoagricola.com/web/templates/Principalnew2/assets/img/logo.png",
+    "membership": 3,
+    "description": "One of the largest banks in El Salvador and part of the Bancolombia Group."
+  },
+  {
+    "name": "Unicomer Group",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2278‑0000",
+    "website": "http://www.unicomergroup.com",
+    "image": "https://grupounicomer.com/wp-content/uploads/2022/12/logo-sol-gris.png",
+    "membership": 2,
+    "description": "Retail and consumer finance group operating in over 26 countries."
+  },
+  {
+    "name": "Empresas ADOC",
+    "address": "Soyapango, El Salvador",
+    "phone": "+503 2265‑0000",
+    "website": "https://www.empresasadoc.com",
+    "image": "https://www.empresasadoc.com/themes/warehouse/assets/img/logo_color.png",
+    "membership": 2,
+    "description": "Leading shoe manufacturer and retailer in Central America."
+  },
+  {
+    "name": "Grupo Agrisal",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2500‑0000",
+    "website": "https://www.agrisal.com",
+    "image": "https://agrisal.com/hs-fs/hubfs/logo.png?width=64&height=70&name=logo.png",
+    "membership": 3,
+    "description": "Diversified group in hospitality, retail, and real estate development."
+  },
+  {
+    "name": "Ferromax Group",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2277‑0000",
+    "website": "https://grupoferromax.com/",
+    "image": "https://grupoferromax.com/wp-content/themes/ferromax/img/galvanisa-logo.png",
+    "membership": 1,
+    "description": "Manufacturer and distributor of metal and structural products."
+  },
+  {
+    "name": "Ternova",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2266‑0000",
+    "website": "https://www.ternova.group/",
+    "image": "https://cdn.prod.website-files.com/66675b9125183e4d2a7a474e/666c90cd19e53c04711fb57f_d0164f8abe71228f954cd1112db78b48_Capa_1.svg",
+    "membership": 2,
+    "description": "Sustainable packaging and innovation company, carbon neutral certified.",
+    "color": "purple"
+  },
+  {
+    "name": "Claro El Salvador",
+    "address": "San Salvador, El Salvador",
+    "phone": "+503 2255‑0000",
+    "website": "https://www.claro.com.sv",
+    "image": "https://www.claro.com.sv/portal/sv/recursos_tema/assets/vector/logo-claro-blanco.svg",
+    "membership": 3,
+    "description": "Telecommunications and mobile service provider, part of América Móvil.",
+    "color" : "red"
+  }
+]
