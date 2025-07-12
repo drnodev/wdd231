@@ -82,5 +82,6 @@
 
     a.active{
         background-color: var(--accent-color);
+        color: #000;
     }
 }   
