@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         website.innerHTML = `<small><a href='${item.website}' target='_blank'  >Website</a></small>`
 
         div.appendChild(image)
-        div.appendChild(level)
         div.appendChild(name)
+        div.appendChild(level)
         div.appendChild(phone)
         div.appendChild(addr)
         div.appendChild(website)
