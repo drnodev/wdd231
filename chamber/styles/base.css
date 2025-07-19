@@ -287,3 +287,7 @@ footer {
     color: var(--text-color);
 }
 
+li.active {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}

@@ -44,8 +44,8 @@
     }
 
     li.active, .active a{
-        background-color: var(--primary-color);
-        color: #000 !important;
+        background-color: var(--accent-color);
+        color: white;
     }
 
     .navigation a {
@@ -82,7 +82,7 @@
 
     a.active{
         background-color: var(--accent-color);
-        color: #000;
+        color: white;
     }
 
     .search-inputs{

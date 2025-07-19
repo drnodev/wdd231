@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
 
     const displayCard = (item) => {
+        const getLevel = (level) =>{
+            switch (level) {
+                case 1: return "Member"
+                case 2: return "Silver"
+                case 3: return "Gold"
+            }
+        }
+
         const div = document.createElement('div');
         div.classList.add('item');
 
@@ -35,15 +43,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         const name = document.createElement('div')
         name.innerHTML = `<small>${item.name}</small>`
 
+        const addr = document.createElement('div')
+        addr.innerHTML = `<small>${item.address}</small>`
+
         const phone = document.createElement('div')
         phone.innerHTML = `<small>${item.phone}</small>`
+
+        const level = document.createElement('div')
+        level.innerHTML = `<small>${getLevel(item.membership)}</small>`
 
         const website = document.createElement('div')
         website.innerHTML = `<small><a href='${item.website}' target='_blank'  >Website</a></small>`
 
-        div.appendChild(image);
+        div.appendChild(image)
+        div.appendChild(level)
         div.appendChild(name)
         div.appendChild(phone)
+        div.appendChild(addr)
         div.appendChild(website)
         result.appendChild(div);
     }
