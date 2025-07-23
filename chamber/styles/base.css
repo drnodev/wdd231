@@ -1,7 +1,7 @@
 :root {
     --primary-color: #0895e0;
     --secondary-color: #414563;
-    --accent-color: #00b894;
+    --accent-color: #00614E;
     --text-color: #333333;
     --background-color: #f5f5f5;
     --action-color: #244c68;
@@ -274,6 +274,7 @@ footer {
     border-top: 1px solid #000;
     width: 100%;
     display: flex;
+    flex-direction: column;
     height: 100px;
     padding: 1rem;
     justify-content: space-evenly;
@@ -281,6 +282,9 @@ footer {
     background-color: #fdfdfd;
 }
 
+.social svg{
+    width: 32px;
+}
 
 .site-info {
     display: flex;
@@ -293,4 +297,44 @@ footer {
 li.active {
     background-color: var(--accent-color) !important;
     color: white !important;
+}
+
+
+ main .call-action{
+    height: calc(100vh - 50%);
+    padding: 1rem;
+    background-image: url('../images/hero.webp');
+    background-size: 60rem;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 93, 170, 0.9);
+    padding-top: 6rem;
+ }
+
+button.bt-call-action {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 1rem;
+    font-size: 14px;
+    color: #FFF;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.events h3, .weather h3, .forecast h3{
+    background: var(--secondary-color);
+    padding: 5px;
+    color: var(--background-color);
+}
+.events p{
+ margin-top: 5px;
 }
