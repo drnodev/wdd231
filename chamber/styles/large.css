@@ -110,47 +110,53 @@
         background-image: none !important;
     }
 
-
     .hero {
-        position: relative;
         background-image: url('../images/hero.webp');
         background-size: cover;
-        background-position: center;
-        height: 100vh;
+        background-position: top;
+        height: 600px !important; /* ← Ajusta esta altura según tu diseño */
+        min-height: 500px;
+        position: relative;
+        color: white;
+        align-items: start !important;
+       
+    }
+
+
+    .hero-call {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: rgba(0,0,0,0.5);
+        padding: 1rem;
+        border-radius: 8px;
+        
+    }
+    .hero-call h1{
+        font-size: 1.8rem;
+    }
+
+    .hero-call > div{
         display: flex;
-        align-items: start;
-        padding-top: 1rem;
+        justify-content: center;
+        width: 100% !important;
     }
 
     header.hero>div.header-wrapper {
         background: none !important;
     }
 
-    header.hero>div.header-wrapper>.logo {
-        margin-top: 0;
-    }
+
 
     header.hero>div.site-brand-lg {
-        margin-top: 1.53rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-
+        padding-top: 2.5rem;
     }
 
-
-    main .call-action{
-        position: absolute;
-        width: 60rem;
-        top: calc(100vh - 80%);
-        right: 0;
-        font-size: 1.8rem;
-        color: #242424;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
-        padding-top: 0 !important;
+    header.hero > nav{
+        padding-top: 1rem;;
     }
 
-    .call-action>div {
-        text-align: center;
-    }
 
 button.bt-call-action {
         margin-top: 20px;
@@ -171,6 +177,16 @@ button.bt-call-action {
 
     .content{
         flex-direction: row;
+        justify-content: space-evenly;    
+    }
+    .content div{
+        flex: 1;
     }
 
+    #spotlight-members{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }

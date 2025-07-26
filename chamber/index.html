@@ -17,7 +17,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +27,7 @@
 </head>
 <body>
     <header class="hero">
-        <div class="header-wrapper">
+       <div class="header-wrapper">
             <div class="logo">
                 <img src="images/logo.png" width="100" alt="Chamber Logo">
             </div>
@@ -51,36 +50,48 @@
         </div>
         <nav>
             <ul class="navigation">
-                <li class="active" ><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="#">Discover</a></li>
-                <li><a href="./directory.html">Business Directory</a></li>
+                <li ><a href="./directory.html">Business Directory</a></li>
                 <li><a href="#">Join</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <div class="call-action">
-            Discover events, resources, and a network of local entrepreneurs working together to create lasting impact
+        <div class="hero-call">
+            <h1>Join the El Salvador Chamber of Commerce</h1>
             <div>
-                <button class="bt-call-action">Discover the power of your Chamber</button>
+                <button class="bt-call-action">Grow your business with us!</button>
             </div>
         </div>
+    </header>
+
+    <main>
         <h1>Home</h1>
-    </main>
-     <div class="content">
-          <div class="events">
-             <h3>Events</h3>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, obcaecati, repudiandae impedit natus enim amet, tempore incidunt est voluptas magni architecto voluptates ad earum facere ab expedita similique accusamus? Sint.</p>
+        <div class="content">
+          <div class="events box">
+             <h3>Events</h3> 
+                <strong>Business Growth Summit 2025</strong>
+                <p><strong>Date:</strong> August 15, 2025</p>
+                <p><strong>Time:</strong> 9:00 AM – 4:30 PM</p>
+                <p><strong>Location:</strong> Sheraton Presidente Hotel, San Salvador</p>
+                <p> A full-day event for business owners and professionals to connect, learn, and discover new growth opportunities.</p>
+                <p><strong>Hosted by:</strong> El Salvador Chamber of Commerce</p>
+                <a href="#" class="btn-register">Register Now</a>
           </div>
-          <div class="weather">
-             <h3>Weather</h3>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, obcaecati, repudiandae impedit natus enim amet, tempore incidunt est voluptas magni architecto voluptates ad earum facere ab expedita similique accusamus? Sint.</p>
+          <div class="weather box">
+             <h3>Current Weather</h3>
+             <div id="weather"></div>
           </div>
-          <div class="forecast">
-             <h3>Forecast</h3>
-             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, obcaecati, repudiandae impedit natus enim amet, tempore incidunt est voluptas magni architecto voluptates ad earum facere ab expedita similique accusamus? Sint.</p>
+          <div class="forecast box">
+             <h3>Weather Forecast</h3>
+             <div id="forecast">
+
+             </div>
           </div>
      </div>
+     <div class="content">
+        <div id="spotlight-members"></div>
+     </div>
+    </main>
      <footer>
         <div>
             <strong>El Salvador Chamber of Commerce</strong>
@@ -100,6 +111,7 @@
             <div id="lastModified"></div>
         </div>
     </footer>
+    
     <script src="scripts/main.js" type="module" ></script>
 </body>
 </html>
