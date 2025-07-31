@@ -189,4 +189,21 @@ button.bt-call-action {
         align-items: center;
     }
     
+
+
+    .join-section{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .join-section .form{
+        min-height: 100px;
+        width: 50%;
+    }
+
+    .join-section .cards{
+        min-height: 100px;
+        width: 50%;
+    }
+
 }
