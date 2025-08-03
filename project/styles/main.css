@@ -1,13 +1,13 @@
  body {
       font-family: "Roboto Slab", serif;
       background-color: #f9fbfc;
-      color: #1E281D;
+      color:  #1E281D;
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
     h1, h2, h3, h4 {
-      color: #1a535c;
+      color: #617C4B;
       font-family: "Oswald", sans-serif;
     }
 
@@ -41,7 +41,7 @@
     }
 
   footer {
-    border-top: 1px solid #FF6B6B;
+    border-top: 1px solid  #1E281D;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
