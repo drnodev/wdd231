@@ -19,7 +19,7 @@
 
     <title>Chamber Directory Page</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" href="./images/favicon/favicon-32x32.png" type="image/png" sizes="32x32" >
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
     <link rel="manifest" href="./images/favicon/site.webmanifest">
 
@@ -28,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
 
@@ -57,26 +58,15 @@
         <nav>
             <ul class="navigation">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./discover.html">Discover</a></li>
+                <li class="active" ><a href="./discover.html">Discover</a></li>
                 <li><a href="./directory.html">Business Directory</a></li>
-                <li class="active"><a href="./join.html">Join</a></li>
+                <li><a href="./join.html">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Thank You for Joining!</h1>
-        <section class="thankyou-container">
-            <p>We have received your submission with the following details:</p>
-            <p><span class="field-label">First Name:</span> <span id="fname"></span></p>
-            <p><span class="field-label">Last Name:</span> <span id="lname"></span></p>
-            <p><span class="field-label">Email:</span> <span id="email"></span></p>
-            <p><span class="field-label">Mobile:</span> <span id="phone"></span></p>
-            <p><span class="field-label">Organization:</span> <span id="organization"></span></p>
-            <p><span class="field-label">Submitted:</span> <span id="timestamp"></span></p>
-            <div class="thk-footer">
-                <a class="back" href="./join.html">Back</a>
-            </div>
-        </section>
+       <h1>Discover Page</h1> 
+       <section class="card-container"></section>
     </main>
     <footer>
         <div class="site-info">
@@ -84,7 +74,6 @@
             <div id="lastModified"></div>
         </div>
     </footer>
-    <script type="module" src="scripts/join.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
 </body>
-
 </html>

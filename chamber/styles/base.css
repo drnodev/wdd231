@@ -672,3 +672,40 @@ button.bt-call-action {
     opacity: 1;
   }
 }
+
+.card-container{
+    display: grid;
+    grid-template-areas:
+    "cards";
+}
+
+.card-container .card{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-container h2{
+    margin-bottom: 0.5rem;
+}
+
+.card-container figure{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-container .card figure img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+
+.card-container address{
+    margin-bottom: 0.5rem;
+}
+
+.card-container p{
+    padding: 1rem;
+}
+
