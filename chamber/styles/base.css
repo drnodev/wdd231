@@ -409,7 +409,7 @@ button.bt-call-action {
         background-image: url('../images/hero.webp');
         background-size: cover;
         background-position: left;
-        height: 600px !important; /* ← Ajusta esta altura según tu diseño */
+        height: 600px !important; 
         min-height: 500px;
         position: relative;
         color: white;

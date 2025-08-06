@@ -1,8 +1,0 @@
-nav ul {
-  flex-direction: row;
-  display: flex !important;
-}
-
-#menu-toggle {
-  display: none;
-}
