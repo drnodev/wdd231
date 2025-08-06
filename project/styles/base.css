@@ -143,14 +143,11 @@ nav {
 main {
     flex: 1;
 }
-main h1::before {
-    content: '/';
-}
+
 main h1 {
     margin-top: 1rem;
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
-    color: #cccccc;
 }
 
 
@@ -268,6 +265,10 @@ section.main {
 
 .section {
     text-align: center;
+}
+
+.section .events{
+    background-color: var(--background-color);
 }
 
 .section h2 {
