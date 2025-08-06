@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "title": "Community Soccer Night",
+      "date": "2025-08-10",
+      "location": "Court A",
+      "description": "Open to all ages and skill levels."
+    },
+    {
+      "title": "Basketball Tournament",
+      "date": "2025-08-15",
+      "location": "Court B",
+      "description": "Join the 3v3 competition with prizes."
+    }
+  ]
+}
