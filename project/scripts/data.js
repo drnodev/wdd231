@@ -1,21 +1,4 @@
 
-export async function fetchEvents() {
-  const url = './data/data.json';
-
-  try {
-    const response = await fetch(url);
-    
-    if (!response.ok) return [];
-    
-    const data = await response.json();
-
-    return data.events;
-  } catch (error) {
-    console.error('Error fetching events:', error.message);
-    return []; 
-  }
-}
-
 
 export function getUpcomingEvents(events, count = 5) {
   const today = new Date();

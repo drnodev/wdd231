@@ -6,7 +6,7 @@ import placesJson from '../data/places.js'
 export const loadCards = async () =>{
     try {
       //const response = await fetch('./data/places.json');
-      const places = placesJson();
+      const places = placesJson;
 
       console.log(places)
 

@@ -1,4 +1,4 @@
- const placesJson = () =>  {return [
+ const placesJson  =  [
   {
     "name": "Santa Ana Volcano",
     "image": "images/discover/santaana.webp",
@@ -55,6 +55,6 @@
     "description": "A tourist boardwalk with restaurants, a seafood market, and a historic fishing pier.",
     "button": "Learn More"
   }
-]}
+]
 
 export default placesJson
