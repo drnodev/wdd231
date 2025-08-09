@@ -12,7 +12,7 @@ export function getUpcomingEvents(events, count = 5) {
 
 
 export function renderEventCard(event) {
-  const formattedDate = new Date(event.date).toLocaleDateString(undefined, {
+  const formattedDate = new Date(event.date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'

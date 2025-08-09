@@ -210,4 +210,52 @@
     .event-adds{
         grid-template-areas: 'event event event';
     }
+
+
+ .content-block {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .content-block:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .content-block .text {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .content-block .image {
+    flex: 0 0 300px;
+  }
+
+  .cta {
+    margin-bottom: 2rem;
+  }
+
+  .page.navigation li{
+    background-color: var(--secondary-color);
+    }
+
+    .section-reservations{
+        padding: 2rem;
+        flex-direction: row;
+    }
+
+    .section-reservations form{
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    #reservations-items .results{
+        padding: 1rem;
+        height: 750px;
+        overflow-y: auto;
+    }
+   
 }
