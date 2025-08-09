@@ -1,12 +1,19 @@
 
-
 export async function fetchEvents() {
-  const url = './data/data.json'
-  const response = await fetch(url);
-  if (!response.ok) throw new Error('Failed to load events');
-  const data = await response.json();
-  console.log(data.events)
-  return data.events;
+  const url = './data/data.json';
+
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) return [];
+    
+    const data = await response.json();
+
+    return data.events;
+  } catch (error) {
+    console.error('Error fetching events:', error.message);
+    return []; 
+  }
 }
 
 

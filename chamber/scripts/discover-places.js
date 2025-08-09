@@ -1,9 +1,14 @@
+
+
+import placesJson from '../data/places.js' 
+
+
 export const loadCards = async () =>{
     try {
-      const response = await fetch('./data/places.json');
-      const places = await response.json();
+      //const response = await fetch('./data/places.json');
+      const places = placesJson();
 
-console.log(places)
+      console.log(places)
 
       const container = document.querySelector('.card-container');
 
