@@ -63,9 +63,13 @@
     </header>
 
     <main>
-        
+        <h1 class="text-lg">Reservation created</h1>
+        <p class="text-center">
+            Thank you! Your reservation has been received. Here is the information you provided:
+        </p>
+        <div id="data">
 
-
+        </div>
     </main>
     <footer>
         <div>
@@ -98,8 +102,18 @@
             <div id="lastModified"></div>
         </div>
     </footer>
-
-    <script src="scripts/main.js" type="module"></script>
+    <button id="floatingCart" aria-label="Open cart">
+        🛒 Cart
+        <span id="cartCount">0</span>
+    </button>
+    <dialog id="cartDialog">
+        <h2>Your Cart</h2>
+        <div id="cart"></div>
+        <menu>
+            <button id="closeCart">Close</button>
+        </menu>
+    </dialog>
+    <script src="scripts/showreservation.js" type="module"></script>
 </body>
 
 </html>

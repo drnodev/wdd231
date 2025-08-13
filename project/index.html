@@ -66,7 +66,7 @@
                 Oct 24, 2025 14:30 hrs
             </div>
             <div>
-                <button class="bt-call-action">Buy the tickets!</button>
+                <button class="bt-call-action" id="btn-main-event">Buy the tickets!</button>
             </div>
         </div>
     </header>
@@ -141,7 +141,17 @@
             <div id="lastModified"></div>
         </div>
     </footer>
-
+    <button id="floatingCart" aria-label="Open cart">
+        🛒 Cart
+        <span id="cartCount">0</span>
+    </button>
+    <dialog id="cartDialog">
+        <h2>Your Cart</h2>
+        <div id="cart"></div>
+        <menu>
+            <button id="closeCart">Close</button>
+        </menu>
+    </dialog>
     <script src="scripts/main.js" type="module"></script>
 </body>
 

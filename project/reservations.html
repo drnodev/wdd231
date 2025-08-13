@@ -148,7 +148,17 @@
             <div id="lastModified"></div>
         </div>
     </footer>
-
+    <button id="floatingCart" aria-label="Open cart">
+        🛒 Cart
+        <span id="cartCount">0</span>
+    </button>
+    <dialog id="cartDialog">
+        <h2>Your Cart</h2>
+        <div id="cart"></div>
+        <menu>
+            <button id="closeCart">Close</button>
+        </menu>
+    </dialog>
     <script src="scripts/main.js" type="module"></script>
 </body>
 

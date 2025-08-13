@@ -18,19 +18,65 @@ export const loadReservations = () => {
 export const normalize = (s) => { return String(s || '').trim().toLowerCase(); }
 
 
+export const renderReservationCard = (reservation) => {
+  return `
+    <div class="event-card">
+      <div>
+        <h3 class="event-title">${reservation.fullName}</h3>
+        <small>Booked at: ${new Date(reservation.createdAt).toLocaleString()}</small>
+      </div>
+      <div class="event-content">
+        <div>
+          <p><strong>Location:</strong> ${reservation.eventType}</p>
+          <p><strong>Date:</strong> ${reservation.date}</p>
+        </div>
+        <div>
+          <p><strong>Time:</strong> ${reservation.time}</p>
+          <p><strong>Guests:</strong> ${reservation.guests}</p>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
 
 export const reservations = () => {
   try {
+
+
+    const eventType = document.getElementById('eventType')
+
+
+
     const form = document.getElementById('reservationForm');
     const results = document.querySelector('#reservations-items .results')
+    const showData = (filter) => {
 
-    const upcomming = getUpcomingEvents(
-      events, 50
-    )
+      console.log(filter)
+      results.innerHTML = ""
 
-    upcomming.map((event) => {
-      results.innerHTML += renderEventCard(event)
+      const upcomming = getUpcomingEvents(
+        events, 50
+      )
+      upcomming.filter((r) => {
+        if (filter.length < 1) return r
+        if (r.location === filter) return r
+      }).map((event) => { results.innerHTML += renderEventCard(event) }).join('')
+      const reservations = loadReservations();
+      results.innerHTML += reservations.filter((r) => {
+        if (filter.length < 1) return r
+        if (r.eventType === filter) return r
+      }).map(renderReservationCard).join('');
+    }
+
+    showData("")
+
+    eventType.addEventListener('change', () => {
+      showData(eventType.value)
     })
+
+
+
 
     form.addEventListener('submit', (e) => {
       e.preventDefault()
@@ -73,35 +119,6 @@ export const reservations = () => {
   } catch (error) {
 
   }
-  try {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const tbody = document.querySelector('main');
-
-  
-  for (const [key, value] of urlParams.entries()) {
-    const row = document.createElement('tr');
-    const paramCell = document.createElement('td');
-    paramCell.textContent = key;
-    const valueCell = document.createElement('td');
-    valueCell.textContent = value;
-    row.appendChild(paramCell);
-    row.appendChild(valueCell);
-    tbody.appendChild(row);
-  }
-
-  
-  if (!urlParams.toString()) {
-    const row = document.createElement('tr');
-    const cell = document.createElement('td');
-    cell.setAttribute('colspan', '2');
-    cell.textContent = 'No query parameters found.';
-    row.appendChild(cell);
-    tbody.appendChild(row);
-  }
-  } catch (error) {
-    
-  }
 }
 
 
@@ -141,6 +158,48 @@ export const checkAvailability = (location, date, time) => {
       return { ok: false, reason: `This slot is already reserved for ${location} on ${date} at ${time}.` };
     }
   }
-  console.log("ok")
   return { ok: true, reason: null };
+}
+
+
+export const showReservation = () => {
+  try {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const container = document.querySelector('#data');
+
+    if (!urlParams.toString()) {
+      const noParamsDiv = document.createElement('div');
+      noParamsDiv.textContent = 'No query parameters found.';
+      noParamsDiv.classList.add('no-params');
+      container.appendChild(noParamsDiv);
+      return;
+    }
+
+    // Container para todas las filas
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('params-wrapper');
+
+    for (const [key, value] of urlParams.entries()) {
+      const row = document.createElement('div');
+      row.classList.add('param-row');
+
+      const paramName = document.createElement('div');
+      paramName.classList.add('param-name');
+      paramName.textContent = key.replace(/([A-Z])/g, ' $1');
+
+      const paramValue = document.createElement('div');
+      paramValue.classList.add('param-value');
+      paramValue.textContent = value;
+
+      row.appendChild(paramName);
+      row.appendChild(paramValue);
+
+      wrapper.appendChild(row);
+    }
+
+    container.appendChild(wrapper);
+  } catch (error) {
+    console.error('Error showing reservation:', error);
+  }
 }
